@@ -4,15 +4,20 @@ import './index.css'
 import reportWebVitals from './reportWebVitals'
 
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import App from './pages/App'
+import App from './components/App'
 import About from './pages/About'
 import Gallery from './pages/Gallery'
+import Misc from './pages/Misc'
+import Error from './pages/Error'
+import Home from './pages/Home'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <Error />,
     children: [
+      { index: true, element: <Home /> },
       {
         path: '/about',
         element: <About />,
@@ -23,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/misc',
-        element: <>misc</>,
+        element: <Misc />,
       },
     ],
   },
@@ -32,7 +37,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <div className="absolute bg-stone-100 w-screen h-screen"></div>
+    <div className="fixed z-0 bg-stone-100 w-screen h-screen"></div>
     <RouterProvider router={router} />
   </React.StrictMode>,
 )

@@ -6,8 +6,8 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['IBM Plex Sans', 'sans-serif'],
-        zilla: ['Zilla Slab Highlight', 'serif'],
         space: ['Space Mono', 'monospace'],
+        unna: ['Unna', 'serif'],
       },
     },
   },

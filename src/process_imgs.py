@@ -2,13 +2,13 @@ import os
 # from PIL import Image, ImageOps
 
 # width by height
-THUMBNAIL_MAX_DIMENSIONS = (300,3000)
+# THUMBNAIL_MAX_DIMENSIONS = (300,3000)
 GALLERY_PATH = '../public/gallery'
 
-try: 
-    os.mkdir(f'{GALLERY_PATH}/thumbnails') 
-except OSError as error: 
-    print(error)     
+# try: 
+#     os.mkdir(f'{GALLERY_PATH}/thumbnails') 
+# except OSError as error: 
+#     print(error)     
 
 for img in os.listdir(GALLERY_PATH):
     if not img.endswith('.jpg'):
