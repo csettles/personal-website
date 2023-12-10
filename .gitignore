@@ -12,7 +12,7 @@
 /build
 
 # images
-/public/images
+/public/gallery
 
 # misc
 .DS_Store

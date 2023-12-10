@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 
-import App from './components/App'
-import About from './components/About'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Gallery from './components/Gallery'
+import App from './pages/App'
+import About from './pages/About'
+import Gallery from './pages/Gallery'
 
 const router = createBrowserRouter([
   {
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
         element: <Gallery />,
       },
       {
-        path: '/blog',
-        element: <>Blog</>,
+        path: '/misc',
+        element: <>misc</>,
       },
     ],
   },
@@ -32,6 +32,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
+    <div className="absolute bg-stone-100 w-screen h-screen"></div>
     <RouterProvider router={router} />
   </React.StrictMode>,
 )
